@@ -2,7 +2,7 @@
 
 """
 date: 2018-9-11
-note: decision tree
+note: decision tree basic version
 Ref:  《机器学习实战》- https://github.com/apachecn/AiLearning
 """
 
