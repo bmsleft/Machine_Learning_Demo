@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 """
-Date: 2018-9-11
+Date: 2018-9-13
 Note: linear model learn 
 Ref:  https://github.com/apachecn/hands_on_Ml_with_Sklearn_and_TF
 """
