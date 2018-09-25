@@ -101,8 +101,8 @@ def cnn_mnist():
 
 
 if __name__ == '__main__':
-    # basic_linear_model()
-    cnn_mnist()
+    basic_linear_model()
+    # cnn_mnist()
 
 
 
