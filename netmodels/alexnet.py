@@ -1,7 +1,7 @@
 '''
 图像分类模型的tensorflow实现之--AlexNet
 
-Tensorflow Version: 1.4
+Tensorflow Version: 1.11
 Python Version: 3.6
 
 Refs: https://blog.csdn.net/zyqdragon/article/details/72353420 
