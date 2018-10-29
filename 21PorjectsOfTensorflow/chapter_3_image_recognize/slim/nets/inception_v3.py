@@ -22,7 +22,7 @@ import tensorflow as tf
 
 from nets import inception_utils
 
-slim = tf.contrib.slim
+import tensorflow.contrib.slim as slim
 trunc_normal = lambda stddev: tf.truncated_normal_initializer(0.0, stddev)
 
 
@@ -158,6 +158,7 @@ def inception_v3_base(inputs,
           branch_3 = slim.avg_pool2d(net, [3, 3], scope='AvgPool_0a_3x3')
           branch_3 = slim.conv2d(branch_3, depth(32), [1, 1],
                                  scope='Conv2d_0b_1x1')
+        # 64 + 64 + 96 + 32 = 256
         net = tf.concat(axis=3, values=[branch_0, branch_1, branch_2, branch_3])
       end_points[end_point] = net
       if end_point == final_endpoint: return net, end_points
@@ -182,6 +183,7 @@ def inception_v3_base(inputs,
           branch_3 = slim.avg_pool2d(net, [3, 3], scope='AvgPool_0a_3x3')
           branch_3 = slim.conv2d(branch_3, depth(64), [1, 1],
                                  scope='Conv2d_0b_1x1')
+        # 64 + 64 + 96 + 64 = 288
         net = tf.concat(axis=3, values=[branch_0, branch_1, branch_2, branch_3])
       end_points[end_point] = net
       if end_point == final_endpoint: return net, end_points
